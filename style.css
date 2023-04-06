@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(./wallpaperflare.com_wallpaper.jpg);
+    background-size: cover;
+}
+#heading{
+    color:bisque;
+    font-size: 49px;
+    font-weight: 500;
+}
+#heading pre{
+    padding: 10px;
+    margin: 5px;
+}
+.cell{
+    width:11vw;
+    height:11vw ;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px black;
+    line-height: 11vw;
+    font-size: 8vw;
+    cursor: pointer;
+    background-color: rgba(130, 130, 130, 0.653);
+    transition: all 0.3s;
+    color: aliceblue;
+
+}
+.cell:hover{
+    background-color: rgba(195, 195, 195, 0.783);
+    border-radius: 24px;
+    transition: all 0.3s;
+
+  
+}
+
+#gameContainer{
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+text-align: center;
+}
+#cellContainer{
+    display: grid;
+    grid-template-columns: repeat(3,auto) ;
+    background-color: rgba(0, 255, 255, 0);
+    width:fit-content;
+    margin: auto;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+#statusText{
+    color: antiquewhite;
+    font-size: 45px;
+    font-weight: 500;
+}
+#statusText h1{
+    padding: 7px;
+    margin: 10px;
+}
+#restartBtn{
+    width: 100px;
+    height: 45px;
+    font-size: 20px;
+    border-radius: 18px;
+    border: 0px ;
+    background-color: rgb(113, 47, 235);
+    color: rgb(249, 249, 200);
+    transition: all 0.3s;
+    cursor: pointer;
+    padding: 8px;
+}
+#restartBtn:hover{
+    width: 120px;
+    height: 45px;
+    font-size: 23px;
+    background-color: rgb(171, 24, 225);
+}
+.circle{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width:750px){
+    .cell{
+        width:27vw;
+        height: 27vw;
+        line-height: 25vw;
+        font-size: 17vw;
+    }
+    #statusText{
+        padding-bottom: 20px;
+        margin-top: 50px;
+    }
+
+}
