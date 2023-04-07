@@ -5,9 +5,20 @@ body{
     background-image: url(./wallpaperflare.com_wallpaper.jpg);
     background-size: cover;
 }
+#my-canvas.active{
+    visibility: visible;
+}
+#my-canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 #heading{
     color:bisque;
-    font-size: 49px;
+    font-size: 59px;
     font-weight: 500;
 }
 #heading pre{
@@ -39,6 +50,10 @@ body{
 #gameContainer{
 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 #cellContainer{
     display: grid;
@@ -55,11 +70,21 @@ text-align: center;
     align-items: center;
 }
 #statusText{
-    color: antiquewhite;
-    font-size: 45px;
+    color:moccasin;
+    font-size: 48px;
     font-weight: 500;
+
+    padding: 7px;
+    border-radius: 23px;
+    transition: all 0.3s;
 }
-#statusText h1{
+#statusText:hover{
+    color:rgb(255, 192, 84);
+    font-weight: 500;
+    background-color: #838383cc;
+    
+}
+#statusText h2{
     padding: 7px;
     margin: 10px;
 }
@@ -95,13 +120,17 @@ text-align: center;
         line-height: 25vw;
         font-size: 17vw;
     }
-    #statusText{
+    #statusText h2{
         padding-bottom: 20px;
         margin-top: 50px;
+       
+    }
+    #statusText{
+        font-size: 8VW;
     }
     #heading{
         color:bisque;
-        font-size: 40px;
+        font-size: 11VW;
         font-weight: 500;
     }
 }

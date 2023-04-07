@@ -14,7 +14,7 @@ const winningConditions = [
 let options = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
 let running = false;
-
+let conf = document.querySelector("#my-canvas")
 initializeGame();
 
 function initializeGame(){
@@ -64,9 +64,11 @@ function checkWinner(){
             break;
         }
     }
-
+console.log(conf);
     if(roundWon){
         statusText.textContent = `${currentPlayer} wins!`;
+        conf.classList.add('active');
+        console.log(conf);
         running = false;
     }
     else if(!options.includes("")){
@@ -83,4 +85,5 @@ function restartGame(){
     statusText.textContent = `${currentPlayer}'s turn`;
     cells.forEach(cell => cell.textContent = "");
     running = true;
+    conf.classList.remove('active')
 }
