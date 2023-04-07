@@ -38,7 +38,7 @@ body{
     cursor: pointer;
     background-color: rgba(130, 130, 130, 0.653);
     transition: all 0.3s;
-    color: aliceblue;
+    color:lightcyan;
 
 }
 .cell:hover{
